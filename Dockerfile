@@ -1,11 +1,8 @@
-# Use a tiny web‑server image
-FROM nginx:alpine
+# frontEnd-test/Dockerfile
+FROM nginx:alpine            # lightweight Nginx base
 
-# Copy our page into the default nginx html folder
-COPY index.html /usr/share/nginx/html/index.html
+# copy every file in repo into Nginx html folder
+COPY . /usr/share/nginx/html/
 
-# Expose port 80 (inside container)
-EXPOSE 80
-
-# Run nginx in the foreground so the container stays alive
+EXPOSE 80                    # Nginx listens inside container on 80
 CMD ["nginx", "-g", "daemon off;"]
