@@ -1,39 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Simple Site</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Priyanshu | Portfolio</title>
   <style>
-    body {
+    * {
       margin: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f7fc;
       color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #1f77ff, #0d47a1);
+      color: white;
+      padding: 60px 20px;
       text-align: center;
     }
-    h1 { font-size: 2.5rem; margin-bottom: 0.3rem; }
-    p  { font-size: 1.1rem; color: #666; }
-    a.button {
-      margin-top: 1.5rem;
-      padding: 12px 24px;
-      background: #007bff;
-      color: #fff;
+
+    header h1 {
+      font-size: 3rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    nav {
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
       text-decoration: none;
-      border-radius: 6px;
+      color: #1f77ff;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #1f77ff;
+    }
+
+    .projects li {
+      list-style: none;
+      margin: 12px 0;
+      font-size: 1.1rem;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 24px;
+      background: #1f77ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
       transition: background 0.3s;
     }
-    a.button:hover { background: #0056b3; }
+
+    .button:hover {
+      background: #0d47a1;
+    }
+
+    footer {
+      background: #e8eaf6;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
   </style>
 </head>
 <body>
-  <h1>Welcome all how are you! this </h1>
-  <p>This is a super–simple ajay sir.</p>
-  <a class="button" href="#">Learn More</a>
+
+  <header>
+    <h1>Hi, I'm Priyanshu</h1>
+    <p>Full-Stack Developer | Cloud Enthusiast | MERN Expert</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm Priyanshu, a passionate B.Tech CSE student with a deep interest in full-stack development,
+      cloud technologies, and building meaningful digital solutions. I love learning new things and 
+      creating real-world applications using the MERN stack.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <p>
+      JavaScript, React, Node.js, MongoDB, Express.js, HTML, CSS, AWS, Git, C++, REST APIs, DevOps (learning), Docker
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul class="projects">
+      <li><strong>✅ Medical Recommendation App</strong> – Suggests medicines based on diseases using React & MongoDB</li>
+      <li><strong>✅ Real-Time Chat App</strong> – Built with MERN + Socket.IO for instant messaging</li>
+      <li><strong>✅ To-Do List App</strong> – CRUD-based task manager with JWT authentication</li>
+      <li><strong>✅ NeighborFit</strong> – A match-finding platform for neighborhood activities</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Interested in working together or want to connect?</p>
+    <a class="button" href="mailto:priyanshu@example.com">Email Me</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Priyanshu. All rights reserved.
+  </footer>
+
 </body>
 </html>
